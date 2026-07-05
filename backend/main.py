@@ -12,7 +12,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:5173",
-    "https://daifoll-notes.onrender.com",
+    "https://daifoll-notes-ul32.onrender.com",
     "http://localhost:8080",
 ]
 
