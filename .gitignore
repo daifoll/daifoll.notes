@@ -1,0 +1,10 @@
+# Virtual environment (создаётся из корня проекта)
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/

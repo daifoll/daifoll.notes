@@ -1,0 +1,5 @@
+export { default as NoteList } from './components/NoteList.vue'
+export { default as NoteEditor } from './components/NoteEditor.vue'
+export { default as AuthorPrompt } from './components/AuthorPrompt.vue'
+export { useNotesStore } from './store/notesStore'
+export { useNoteEditor } from './composables/useNoteEditor'
