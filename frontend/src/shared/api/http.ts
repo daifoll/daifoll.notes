@@ -1,3 +1,5 @@
+import { apiUrl } from './config'
+
 export class HttpError extends Error {
   status: number
 
@@ -8,11 +10,19 @@ export class HttpError extends Error {
   }
 }
 
+function resolveRequestUrl(path: string): string {
+  if (/^https?:\/\//.test(path)) {
+    return path
+  }
+
+  return apiUrl(path)
+}
+
 export async function request<T>(path: string, options?: RequestInit): Promise<T> {
   let response: Response
 
   try {
-    response = await fetch(path, {
+    response = await fetch(resolveRequestUrl(path), {
       headers: {
         'Content-Type': 'application/json',
         ...options?.headers,

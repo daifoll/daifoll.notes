@@ -46,14 +46,25 @@ API будет доступен на [http://localhost:8000](http://localhost:80
 
 ## Frontend
 
-### 1. Установка зависимостей
+### 1. Настройка окружения
+
+Скопируй `frontend/.env.example` в `frontend/.env`:
+
+```bash
+cd frontend
+cp .env.example .env
+```
+
+По умолчанию API доступен по `http://localhost:8000/api` (`VITE_API_BASE_URL`).
+
+### 2. Установка зависимостей
 
 ```bash
 cd frontend
 npm install
 ```
 
-### 2. Запуск
+### 3. Запуск
 
 ```bash
 npm run dev
@@ -61,7 +72,7 @@ npm run dev
 
 Приложение откроется на [http://localhost:5173](http://localhost:5173).
 
-Frontend обращается к API по адресу `http://localhost:8000` — backend должен быть запущен параллельно.
+Frontend обращается к API по адресу из `VITE_API_BASE_URL` — backend должен быть запущен параллельно.
 
 ## Запуск всего проекта
 
