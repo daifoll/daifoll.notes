@@ -19,7 +19,7 @@ CREATE USER daifoll WITH PASSWORD 'your_password';
 CREATE DATABASE daifollnotes OWNER daifoll;
 ```
 
-Укажи строку подключения в `backend/db.py` в переменной `DATABASE_URL`.
+Скопируй `backend/.env.example` в `backend/.env` и укажи строку подключения в `DATABASE_URL`.
 
 При первом запуске таблицы создаются автоматически через SQLAlchemy (`Base.metadata.create_all`).
 
